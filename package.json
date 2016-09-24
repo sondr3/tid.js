@@ -1,0 +1,23 @@
+{
+  "name": "tid",
+  "version": "0.0.1",
+  "description": "A stupidly simple time ago library",
+  "main": "index.js",
+  "scripts": {
+    "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'index.min.js' -- index.js",
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.eons.io:sondr3/tid.git"
+  },
+  "author": "Sondre Nilsen",
+  "license": "MIT",
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "uglify-js": "^2.7.3",
+    "xo": "^0.16.0"
+  }
+}
