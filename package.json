@@ -4,7 +4,7 @@
   "description": "A stupidly simple time ago library",
   "main": "index.js",
   "scripts": {
-    "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'index.min.js' -- index.js",
+    "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'tid.min.js' -- tid.js",
     "test": "xo --global=document"
   },
   "repository": {
