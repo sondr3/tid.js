@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'index.min.js' -- index.js",
-    "test": "xo"
+    "test": "xo --global=document"
   },
   "repository": {
     "type": "git",

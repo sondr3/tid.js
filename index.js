@@ -1,13 +1,15 @@
 (function tid() {
   // Create an array of all the measurements we'll use to display
   var measure = 'second,minute,hour,day,week,month,year'.split(',');
-  var SEC_ARRAY = [60, 60, 24, 7, 365/7/12, 12];
+  var SEC_ARRAY = [60, 60, 24, 7, 365 / 7 / 12, 12];
   var SEC_ARRAY_LEN = 6;
 
   // Formats the time ago into either plural or singular
   function formatAgo(number, index) {
-    var unit = measure[parseInt(index / 2)];
-    if (number > 1) unit += 's';
+    var unit = measure[parseInt(index / 2, 10)];
+    if (number > 1) {
+      unit += 's';
+    }
     return number + ' ' + unit + ' ago';
   }
 
@@ -26,10 +28,12 @@
       diff /= SEC_ARRAY[i];
     }
 
-    diff = parseInt(diff);
+    diff = parseInt(diff, 10);
     i *= 2;
 
-    if (diff > (i === 0 ? 9 : 1)) i += 1;
+    if (diff > (i === 0 ? 9 : 1)) {
+      i += 1;
+    }
     return formatAgo(diff, i);
   }
 
@@ -42,9 +46,9 @@
   // the relative time since the content was posted
   var elements = document.getElementsByTagName('time');
   for (var i = 0; i < elements.length; i++) {
-    var el = elements[i],
-        date = el.getAttribute('datetime'),
-        output = formatDiff(diffSec(date, new Date()));
+    var el = elements[i];
+    var date = el.getAttribute('datetime');
+    var output = formatDiff(diffSec(date, new Date()));
 
     if (output) {
       el.textContent = output;
