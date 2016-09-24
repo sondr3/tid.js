@@ -9,7 +9,7 @@ Differences from the originals include:
 - No need for jQuery (same as `timeago.js`)
 - No support for locale of any kind, it's all English
 - No configuration whatsoever, add it to your site and you're done
-- Super tiny size (531 bytes/384 bytes gzipped)
+- Super tiny size (~530 bytes/~380 bytes gzipped)
 
 ## Usage
 
