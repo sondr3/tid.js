@@ -22,6 +22,11 @@ display the relative time since it was posted. It's just that stupidly simple.
 
 Add `<script src="tid.min.js"></script>`
 
+## Name
+
+`Tid` is simply `time` in Norwegian. And since naming is a Hard Problem in
+programming I kept it very simple. :)
+
 ## License
 MIT © Sondre Nilsen
 
