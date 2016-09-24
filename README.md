@@ -20,7 +20,7 @@ display the relative time since it was posted. It's just that stupidly simple.
 
 ## Installation
 
-Add `<script src="index.min.js"></script>`
+Add `<script src="tid.min.js"></script>`
 
 ## License
 MIT © Sondre Nilsen
