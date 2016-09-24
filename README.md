@@ -1,4 +1,5 @@
 # Tid.js
+[![npm version](https://badge.fury.io/js/tid.js.svg)](https://badge.fury.io/js/tid.js)
 
 `tid.js` is a tiny and stupidly simple library to display how long ago something
 was posted online. It's forked from [`timeago.js`][timeago] which in turn is
