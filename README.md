@@ -14,7 +14,7 @@ Differences from the originals include:
 
 ## Usage
 
-Download the `index.min.js` script and add it to your webpage and make sure your
+Download the `tid.min.js` script and add it to your webpage and make sure your
 `time` elements contains a `datetime` attribute that is parseable by JavaScript
 (i.e. it must be either ISO8601 or RFC2822 formatted) and it will automatically
 display the relative time since it was posted. It's just that stupidly simple.
