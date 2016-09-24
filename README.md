@@ -1,12 +1,12 @@
 # Tid.js
 
 `tid.js` is a tiny and stupidly simple library to display how long ago something
-was posted online. It's forked from [`timeago.js`](timeago) which in turn is
-forked from [`jquery-timeago`](jquery-timeago).
+was posted online. It's forked from [`timeago.js`][timeago] which in turn is
+forked from [`jquery-timeago`][jquery-timeago].
 
 Differences from the originals include:
 
-- No need for jQuery (same as `timeago.js`)
+- No need for jQuery (same as [`timeago.js`][timeago])
 - No support for locale of any kind, it's all English
 - No configuration whatsoever, add it to your site and you're done
 - Super tiny size (~530 bytes/~380 bytes gzipped)
@@ -21,6 +21,9 @@ display the relative time since it was posted. It's just that stupidly simple.
 ## Installation
 
 Add `<script src="index.min.js"></script>`
+
+## License
+MIT © Sondre Nilsen
 
 [timeago]: https://github.com/hustcc/timeago.js
 [jquery-timeago]: https://github.com/rmm5t/jquery-timeago
