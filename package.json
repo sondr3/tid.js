@@ -1,7 +1,13 @@
 {
-  "name": "tid",
-  "version": "0.0.1",
-  "description": "A stupidly simple time ago library",
+  "name": "tid.js",
+  "version": "1.0.0",
+  "description": "A tiny and stupidly simple library to display how long ago something was posted",
+  "keywords": [
+    "frontend",
+    "datetime",
+    "time",
+    "timeago"
+  ],
   "main": "index.js",
   "scripts": {
     "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'tid.min.js' -- tid.js",
@@ -16,6 +22,12 @@
   "xo": {
     "space": true
   },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "tid.js",
+    "tid.min.js"
+  ],
   "devDependencies": {
     "uglify-js": "^2.7.3",
     "xo": "^0.16.0"
