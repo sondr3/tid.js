@@ -20,6 +20,7 @@
     return new Date(input);
   }
 
+  // Black fucking magic
   function formatDiff(diff) {
     var i = 0;
     diff = Math.abs(diff);
@@ -37,13 +38,14 @@
     return formatAgo(diff, i);
   }
 
+  // Get the time difference in seconds since whatever content was posted online
   function diffSec(date, nowDate) {
     nowDate = nowDate ? toDate(nowDate) : new Date();
     return (nowDate - toDate(date)) / 1000;
   }
 
-  // Loop over every <time> element in your and replace the content of if with
-  // the relative time since the content was posted
+  // Loop over every <time> element and replace the content of it with the time
+  // since the content was posted
   var elements = document.getElementsByTagName('time');
   for (var i = 0; i < elements.length; i++) {
     var el = elements[i];
