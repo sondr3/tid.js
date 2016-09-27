@@ -10,7 +10,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'tid.min.js' -- tid.js",
+    "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'pre.min.js' -- tid.js",
+    "optimize": "./node_modules/optimize-js/lib/bin.js pre.min.js > tid.min.js",
+    "build": "npm run minify && npm run optimize && rm -f pre.min.js",
     "test": "xo --global=document"
   },
   "repository": "sondr3/tid.js",
@@ -26,6 +28,7 @@
     "tid.min.js"
   ],
   "devDependencies": {
+    "optimize-js": "^1.0.1",
     "uglify-js": "^2.7.3",
     "xo": "^0.16.0"
   }
