@@ -4,20 +4,19 @@
  * Version: 1.1.0
  * https://tid.eons.io
  **/
-
 (function tid() {
   // Create an array of all the measurements we'll use to display
   var measure = ['second', 'minute', 'hour', 'day', 'week', 'month', 'year'];
-  var SEC_ARRAY = [60, 60, 24, 7, 365 / 7 / 12, 12];
-  var SEC_ARRAY_LEN = 6;
+  var timeArray = [60, 60, 24, 7, 365 / 7 / 12, 12];
+  var timeArrayLen = 6;
 
   // Black fucking magic
   function formatTime(diff) {
     var i = 0;
     diff = Math.abs(diff);
 
-    for (; diff >= SEC_ARRAY[i] && i < SEC_ARRAY_LEN; i++) {
-      diff /= SEC_ARRAY[i];
+    for (; diff >= timeArray[i] && i < timeArrayLen; i++) {
+      diff /= timeArray[i];
     }
 
     diff = parseInt(diff, 10);
