@@ -1,3 +1,20 @@
+<a name="1.1.0"></a>
+## 1.1.0
+> 2016-09-27
+
+Simplified the file quite a bit, removed a few redundant functions that only
+returned things that we could directly parse instead, mostly because of the
+assumptions we made about the structure of `time` elements.
+
+Also added `optimize-js` to make the startup time of `tid.js` faster due to how
+browsers implement IIFE.
+
+* [[`30192a4bc3`](https://github.com/sondr3/tid.js/commit/30192a4bc3)] - Update version in package.json
+* [[`46dfeb60f8`](https://github.com/sondr3/tid.js/commit/46dfeb60f8)] - Add minified version of new version
+* [[`e7bfa904aa`](https://github.com/sondr3/tid.js/commit/e7bfa904aa)] - Add optimize-js to make script even faster
+* [[`6999936a8a`](https://github.com/sondr3/tid.js/commit/6999936a8a)] - Rename arrays for timekeeping
+* [[`9b1ef21c1e`](https://github.com/sondr3/tid.js/commit/9b1ef21c1e)] - Simplify the file even more
+
 <a name="1.0.0"></a>
 ## 1.0.0
 > 2016-09-24
