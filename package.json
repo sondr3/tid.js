@@ -15,6 +15,7 @@
     "build": "npm run minify && npm run optimize && rm -f pre.min.js",
     "test": "xo --global=document"
   },
+  "homepage": "https://tid.eons.io",
   "repository": "sondr3/tid.js",
   "author": "Sondre Nilsen",
   "license": "MIT",
