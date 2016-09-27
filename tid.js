@@ -1,27 +1,18 @@
+/**
+ * tid.js -- a tiny and stupidly simple relative time ago library
+ * MIT License (c) 2016 Sondre Nilsen
+ * Version: 1.1.0
+ * https://tid.eons.io
+ **/
+
 (function tid() {
   // Create an array of all the measurements we'll use to display
-  var measure = 'second,minute,hour,day,week,month,year'.split(',');
+  var measure = ['second', 'minute', 'hour', 'day', 'week', 'month', 'year'];
   var SEC_ARRAY = [60, 60, 24, 7, 365 / 7 / 12, 12];
   var SEC_ARRAY_LEN = 6;
 
-  // Formats the time ago into either plural or singular
-  function formatAgo(number, index) {
-    var unit = measure[parseInt(index / 2, 10)];
-    if (number > 1) {
-      unit += 's';
-    }
-    return number + ' ' + unit + ' ago';
-  }
-
-  // Make some pretty stupid assumptions about the input, it should be a
-  // parsable date format for JavaScript, i.e. ISO8601 or RFC2822 and therefore
-  // not require any special tinkering
-  function toDate(input) {
-    return new Date(input);
-  }
-
   // Black fucking magic
-  function formatDiff(diff) {
+  function formatTime(diff) {
     var i = 0;
     diff = Math.abs(diff);
 
@@ -35,13 +26,13 @@
     if (diff > (i === 0 ? 9 : 1)) {
       i += 1;
     }
-    return formatAgo(diff, i);
-  }
 
-  // Get the time difference in seconds since whatever content was posted online
-  function diffSec(date, nowDate) {
-    nowDate = nowDate ? toDate(nowDate) : new Date();
-    return (nowDate - toDate(date)) / 1000;
+    var unit = measure[parseInt(i / 2, 10)];
+    if (diff > 1) {
+      unit += 's';
+    }
+
+    return diff + ' ' + unit + ' ago';
   }
 
   // Loop over every <time> element and replace the content of it with the time
@@ -49,8 +40,13 @@
   var elements = document.getElementsByTagName('time');
   for (var i = 0; i < elements.length; i++) {
     var el = elements[i];
-    var date = el.getAttribute('datetime');
-    var output = formatDiff(diffSec(date, new Date()));
+    // Make some pretty stupid assumptions about the input, it should be a
+    // parsable date format for JavaScript, i.e. ISO8601 or RFC2822 and therefore
+    // not require any special tinkering
+    var date = Date.parse(el.getAttribute('datetime'));
+    // Get the time difference in seconds since whatever content was posted
+    // online and format it so it can be output to our site
+    var output = formatTime((new Date() - date) / 1000);
 
     if (output) {
       el.textContent = output;
