@@ -1,4 +1,5 @@
 # Tid.js
+
 [![npm version](https://badge.fury.io/js/tid.js.svg)](https://badge.fury.io/js/tid.js)
 
 `tid.js` is a tiny and stupidly simple library to display how long ago something
@@ -9,8 +10,9 @@ Differences from the originals include:
 
 - No need for jQuery (same as [`timeago.js`][timeago])
 - No support for locale of any kind, it's all English
-- No configuration whatsoever, add it to your site and you're done
-- Super tiny size (~440 bytes minified/~350 bytes gzipped)
+- No configuration whatsoever, add it to your site and you're done (so long as
+  you follow the usage instructions below)
+- Super tiny size (~336 bytes minified/~282 bytes gzipped)
 
 ## Usage
 
@@ -29,6 +31,7 @@ Add `<script src="tid.min.js"></script>`
 programming I kept it very simple. :)
 
 ## License
+
 MIT © Sondre Nilsen
 
 [timeago]: https://github.com/hustcc/timeago.js

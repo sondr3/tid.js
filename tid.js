@@ -1,6 +1,6 @@
 /**
  * tid.js -- a tiny and stupidly simple relative time ago library
- * MIT License (c) 2016 Sondre Nilsen
+ * MIT License (c) 2019 Sondre Nilsen
  * Version: 1.2.0
  * https://tid.eons.io
  **/
