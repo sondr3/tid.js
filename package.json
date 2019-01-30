@@ -8,13 +8,6 @@
     "time",
     "timeago"
   ],
-  "main": "index.js",
-  "scripts": {
-    "minify": "./node_modules/uglify-js/bin/uglifyjs --compress --mangle --output 'pre.min.js' -- tid.js",
-    "optimize": "./node_modules/optimize-js/lib/bin.js pre.min.js > tid.min.js",
-    "build": "npm run minify && npm run optimize && rm -f pre.min.js",
-    "test": "xo --global=document"
-  },
   "homepage": "https://tid.eons.io",
   "repository": "sondr3/tid.js",
   "author": "Sondre Nilsen",
@@ -23,6 +16,9 @@
     "extends": [
       "plugin:prettier/recommended"
     ]
+  },
+  "scripts": {
+    "build": "terser --compress --mangle -o tid.min.js -- tid.js"
   },
   "files": [
     "README.md",
@@ -34,6 +30,7 @@
     "eslint": "^5.12.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.2"
+    "prettier": "^1.16.2",
+    "terser": "^3.14.1"
   }
 }
