@@ -13,12 +13,17 @@
   "author": "Sondre Nilsen",
   "license": "MIT",
   "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
     "extends": [
       "plugin:prettier/recommended"
     ]
   },
   "scripts": {
-    "build": "terser --compress --mangle -o tid.min.js -- tid.js"
+    "optimize": "terser --compress --mangle -o tid.min.js -- tid.js",
+    "bundle": "cp tid.js tid.min.js ../../sites/tid.eons/content",
+    "build": "yarn optimize && yarn bundle"
   },
   "files": [
     "README.md",
