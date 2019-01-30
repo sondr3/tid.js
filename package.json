@@ -19,8 +19,10 @@
   "repository": "sondr3/tid.js",
   "author": "Sondre Nilsen",
   "license": "MIT",
-  "xo": {
-    "space": true
+  "eslintConfig": {
+    "extends": [
+      "plugin:prettier/recommended"
+    ]
   },
   "files": [
     "README.md",
@@ -29,8 +31,9 @@
     "tid.min.js"
   ],
   "devDependencies": {
-    "optimize-js": "^1.0.1",
-    "uglify-js": "^2.7.3",
-    "xo": "^0.16.0"
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.2"
   }
 }
