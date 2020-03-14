@@ -22,8 +22,7 @@
   },
   "scripts": {
     "optimize": "terser --compress --mangle -o tid.min.js -- tid.js",
-    "bundle": "cp tid.js tid.min.js ../../sites/tid.eons/content",
-    "build": "yarn optimize && yarn bundle"
+    "build": "yarn optimize"
   },
   "files": [
     "README.md",
@@ -32,10 +31,10 @@
     "tid.min.js"
   ],
   "devDependencies": {
-    "eslint": "^5.12.1",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.2",
-    "terser": "^3.14.1"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "terser": "^4.6.6"
   }
 }
